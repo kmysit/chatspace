@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+
+.messages {
+  background-color: #fafafa;
+  width: calc(100vw - 300px);
+  height: calc(100vh - 190px);
+  padding: 35px 40px;
+  .message {
+    padding-bottom: 40px;
+    &__info {
+      margin-bottom: 12px;
+      display: flex;
+      &__name {
+        color: #333333;
+        font-size: 16px;
+      }
+      &__date {
+        color: #999999;
+        font-size: 12px;
+        margin-left: 10px;
+      }
+    }
+    &__text {
+      color: #434a54;
+      font-size: 14px;
+    }
+  }
+}
