@@ -4,15 +4,17 @@
       %p.side-header__box__user-name
         = current_user.name
       %ul.side-header__box__menu
-        %li.side-header__box__menu__edit-user
-          = link_to "#", class: "edit-user__btn" do
-            = icon('fas', 'edit')
         %li.side-header__box__menu__new-groups
-          = link_to edit_user_path(current_user), class: "new-groups__btn" do
+          = link_to new_group_path, class: "new-groups__btn" do
+            = icon('fas', 'edit')
+        %li.side-header__box__menu__edit-user
+          = link_to edit_user_path(current_user), class: "edit-user__btn" do
             = icon('fas', 'cog', class: 'icon')
   .groups
-    = link_to "#", class: "group" do
-      %p.group__group-name
-        tech
-      %p.group__group-message
-        メッセージなし
+    - current_user.groups.each do |group|
+      .group
+        = link_to "#", class: "group" do
+          .group__group-name
+            = group.name
+          .group__group-message
+            メッセージなし

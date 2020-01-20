@@ -20,15 +20,15 @@
     }
     &__menu {
       display: flex;
-      &__edit-user {
-        margin-left: 5px;
-        .edit-user__btn {
-          color: #ffffff;
-        }
-      }
       &__new-groups {
         margin-left: 5px;
         .new-groups__btn {
+          color: #ffffff;
+        }
+      }
+      &__edit-user {
+        margin-left: 5px;
+        .edit-user__btn {
           color: #ffffff;
         }
       }
