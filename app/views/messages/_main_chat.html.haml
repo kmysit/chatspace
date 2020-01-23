@@ -13,20 +13,12 @@
 
   .messages
     = render @messages
-    -# .message
-    -#   .message__info
-    -#     %p.message__info__name
-    -#       kimi
-    -#     %p.message__info__date
-    -#       2020/01/17(Fri) 10:17:25
-    -#   %p.message__text
-    -#     いいい
 
   .main-footer
     = form_for [@group, @message] do |f|
       = f.text_field :content, class: 'main-footer__text', placeholder: 'type a message'
-      .main-footer__form__icon
-        = f.label :image, class: "form__icon__image" do
-          = icon('fas', 'image', class: 'icon')
+      .main-footer__icon
+        = f.label :image, class: ".main-footer__icon__image" do
+          = icon('fas', 'image', class: 'image-icon')
           = f.file_field :image, class: "hidden"
       = f.submit 'Send', class: 'main-footer__submit-btn'
