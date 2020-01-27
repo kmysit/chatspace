@@ -60,7 +60,7 @@
   }
   &__icon {
     background-color: white;
-    padding: 10px 10px;
+    padding: 10px 10px 0 10px;
     .image-icon {
       font-size: 30px;
       cursor: pointer;
@@ -75,6 +75,7 @@
     height: 50px;
     padding: 0 30px;
     margin-left: 15px;
+    border-style: none;
     cursor: pointer;
   }
 }
